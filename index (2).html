@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadman Amin | Web Developer</title>
+<meta name="description" content="Shadman Amin — Web Developer specializing in modern, responsive and user-focused websites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--bg:#080b12;--card:#101622;--text:#f5f7fb;--muted:#98a2b3;--accent:#00d4ff;--accent2:#6d5dfc;--line:rgba(255,255,255,.09)}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,90%);margin:auto}
+nav{position:fixed;top:0;width:100%;z-index:20;background:rgba(8,11,18,.75);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:800}.logo span{color:var(--accent)}
+.links{display:flex;gap:28px;list-style:none}.links a{color:#b9c1ce;font-size:14px}.links a:hover{color:var(--accent)}
+.menu{display:none;font-size:23px}
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 0 70px;background:radial-gradient(circle at 75% 35%,rgba(0,212,255,.12),transparent 28%),radial-gradient(circle at 20% 80%,rgba(109,93,252,.1),transparent 28%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.kicker{color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:3px;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,78px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:650px;font-size:17px;margin-bottom:32px}
+.btns{display:flex;gap:13px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--line);display:inline-flex;gap:9px;align-items:center}.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:0}.outline:hover{border-color:var(--accent);color:var(--accent)}
+.photo{position:relative}.photo:before{content:"";position:absolute;inset:-25px;background:linear-gradient(135deg,var(--accent),var(--accent2));filter:blur(55px);opacity:.18}.photo img{position:relative;width:100%;max-width:420px;margin:auto;border-radius:24px;border:1px solid var(--line);box-shadow:0 35px 90px rgba(0,0,0,.45)}
+section{padding:105px 0}.heading{text-align:center;margin-bottom:50px}.heading small{color:var(--accent);text-transform:uppercase;letter-spacing:3px;font-weight:700}.heading h2{font-size:42px;margin-top:8px}.heading p{color:var(--muted);max-width:600px;margin:12px auto}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px}.about h3{font-size:28px;margin-bottom:16px}.about p{color:var(--muted);margin-bottom:15px}
+.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tech{padding:22px;background:var(--card);border:1px solid var(--line);border-radius:14px}.tech i{font-size:25px;color:var(--accent);margin-bottom:10px}.tech h3{font-size:16px}.tech p{font-size:12px;color:var(--muted);margin-top:5px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s}.project:hover{transform:translateY(-7px);border-color:rgba(0,212,255,.45)}.project-top{height:170px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(0,212,255,.12),rgba(109,93,252,.15))}.project-top i{font-size:50px;color:var(--accent)}.project-body{padding:23px}.project-body h3{margin-bottom:7px}.project-body p{color:var(--muted);font-size:13px;margin-bottom:17px}.github{color:var(--accent);font-size:13px;font-weight:700}
+.contact{text-align:center;background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(109,93,252,.08));border:1px solid var(--line);border-radius:24px;padding:65px 25px}.contact h2{font-size:42px}.contact p{color:var(--muted);max-width:600px;margin:12px auto 28px}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:800px){.links{display:none;position:absolute;top:74px;left:0;width:100%;background:#0b0f18;padding:25px;flex-direction:column;text-align:center}.links.open{display:flex}.menu{display:block}.hero-grid,.about{grid-template-columns:1fr}.photo{order:-1}.stack{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}}
+@media(max-width:500px){h1{font-size:48px;letter-spacing:-2px}.stack{grid-template-columns:1fr}.contact h2,.heading h2{font-size:32px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><a class="logo" href="#home">SHADMAN<span>.</span></a><ul class="links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul><div class="menu"><i class="fa-solid fa-bars"></i></div></div></nav>
+
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div>
+<div class="kicker">Web Developer</div>
+<h1>I build <span>modern websites</span> that work.</h1>
+<p>I’m Shadman Amin, a web developer focused on responsive, clean and professional websites for businesses, personal brands and online projects.</p>
+<div class="btns"><a class="btn primary" href="#projects"><i class="fa-solid fa-code"></i> View My Projects</a><a class="btn outline" href="https://wa.me/923319344080" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Contact Me on WhatsApp</a></div>
+</div>
+<div class="photo"><img src="portfolio.png" alt="Shadman Amin"></div>
+</div></section>
+
+<section id="about"><div class="container">
+<div class="heading"><small>About Me</small><h2>Web Developer & Problem Solver</h2><p>I turn ideas into responsive and practical web experiences.</p></div>
+<div class="about"><div><h3>Focused on the web.</h3><p>I build portfolio sites, landing pages, business websites and custom web interfaces with attention to responsive design, clean code and user experience.</p><p>This portfolio is intentionally focused on web development. My projects section is ready for your GitHub repositories and live website links.</p></div>
+<div class="stack"><div class="tech"><i class="fa-brands fa-html5"></i><h3>HTML5</h3><p>Semantic structure</p></div><div class="tech"><i class="fa-brands fa-css3-alt"></i><h3>CSS3</h3><p>Responsive UI</p></div><div class="tech"><i class="fa-brands fa-js"></i><h3>JavaScript</h3><p>Interactive web apps</p></div><div class="tech"><i class="fa-brands fa-php"></i><h3>PHP</h3><p>Backend development</p></div><div class="tech"><i class="fa-brands fa-wordpress"></i><h3>WordPress</h3><p>CMS websites</p></div><div class="tech"><i class="fa-brands fa-github"></i><h3>GitHub</h3><p>Version control</p></div></div></div>
+</div></section>
+
+<section id="skills"><div class="container"><div class="heading"><small>What I Build</small><h2>Development Skills</h2></div><div class="stack">
+<div class="tech"><i class="fa-solid fa-mobile-screen-button"></i><h3>Responsive Design</h3><p>Websites that adapt to mobile, tablet and desktop.</p></div>
+<div class="tech"><i class="fa-solid fa-bolt"></i><h3>Landing Pages</h3><p>Modern pages designed around clear user actions.</p></div>
+<div class="tech"><i class="fa-solid fa-building"></i><h3>Business Websites</h3><p>Professional online presence for businesses and organizations.</p></div>
+<div class="tech"><i class="fa-solid fa-database"></i><h3>Database Integration</h3><p>Forms and applications connected to databases.</p></div>
+<div class="tech"><i class="fa-solid fa-code"></i><h3>Custom Development</h3><p>Custom functionality instead of one-size-fits-all templates.</p></div>
+<div class="tech"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Website Maintenance</h3><p>Updates, fixes and improvements for existing websites.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="container"><div class="heading"><small>My Work</small><h2>Featured Projects</h2><p>Replace the buttons below with your GitHub repositories or live website URLs.</p></div>
+<div class="projects">
+<div class="project"><div class="project-top"><i class="fa-solid fa-globe"></i></div><div class="project-body"><h3>Project One</h3><p>Responsive website project. Add your project description here.</p><a class="github" href="https://123shad.github.io/sitacademy./" target="_blank">GitHub / Live Demo →</a></div></div>
+<div class="project"><div class="project-top"><i class="fa-solid fa-laptop-code"></i></div><div class="project-body"><h3>Project Two</h3><p>Web application project. Add your project description here.</p><a class="github" href="https://123shad.github.io/project2/" target="_blank">GitHub / Live Demo →</a></div></div>
+<div class="project"><div class="project-top"><i class="fa-solid fa-cart-shopping"></i></div><div class="project-body"><h3>Project Three</h3><p>E-commerce or business website. Add your project description here.</p><a class="github" href="https://123shad.github.io/vertexdigital/" target="_blank">GitHub / Live Demo →</a></div></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="contact"><h2>Let's build something.</h2><p>Have a website idea or project? Get in touch and let's turn it into a working product.</p><div class="btns" style="justify-content:center"><a class="btn primary" href="https://wa.me/923319344080" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</a><a class="btn outline" href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div></div></div></section>
+</main>
+
+<footer>© 2026 Shadman Amin · Web Developer</footer>
+
+<script>
+const menu=document.querySelector('.menu'),links=document.querySelector('.links');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>
